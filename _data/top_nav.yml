@@ -1,0 +1,60 @@
+items:
+  -
+    label: Download
+    fragments:
+      - downloads
+      - versions
+    url: /downloads.html
+  -
+    label: About
+    fragments:
+      - about
+      - releases
+      - faq
+    children:
+      -
+       label: OpenSearch
+       url: /about.html
+      -
+       label: Releases
+       url: /releases.html
+      -
+       label: FAQ
+       url: /faq
+  -
+    label: Community
+    fragments:
+      - events
+      - community_projects
+      - blog
+      - partners
+    children:
+      -
+        label: Blog
+        url: /blog
+      -
+        label: Forum
+        url: https://forum.opensearch.org/
+      -
+        label: Events
+        url: /events
+      -
+        label: Partners
+        url: /partners
+      -
+        label: Projects
+        url: /community_projects
+  -
+    label: Documentation
+    fragment: 
+      - docs
+      - data_prepper
+    children:
+      -
+        label: OpenSearch
+        url: https://opensearch.org/docs/latest/
+      - 
+        label: Data Prepper
+        url: https://Naarcha-AWS.github.io/
+
+
