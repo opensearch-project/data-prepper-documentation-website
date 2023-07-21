@@ -1,6 +1,6 @@
 # About the Data Prepper documentation repo
 
-The documentation repository contains the documentation for Data Prepper. You can find the rendered documentation at [opensearch.org/docs](https://opensearch.org/docs).
+The documentation repository contains the documentation for Data Prepper. You can find the rendered documentation at [opensearch.org/docs](https://opensearch.org/docs/latest/data-prepper).
 
 ## How you can help
 
