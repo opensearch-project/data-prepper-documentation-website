@@ -1,14 +1,9 @@
 title: Date Prepper documentation
 description: >- # this means to ignore newlines until "baseurl:"
   Documentation for OpenSearch, the Apache 2.0 search, analytics, and visualization suite with advanced security, alerting, SQL support, automated index management, deep performance analysis, and more.
-baseurl: "/data-prepper/docs/latest" # the subpath of your site, e.g. /blog
+baseurl: "/docs/latest/data-prepper/" # the subpath of your site, e.g. /blog
 url: "https://opensearch.org" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:path/
-
-opensearch_version: 2.6.0
-opensearch_dashboards_version: 2.6.0
-opensearch_major_minor_version: 2.6
-lucene_version: 9_5_0
 
 # Build settings
 markdown: kramdown
