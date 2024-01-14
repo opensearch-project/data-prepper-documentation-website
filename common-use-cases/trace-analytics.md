@@ -25,7 +25,7 @@ To monitor trace analytics, you need to set up the following components in your 
 
 ## Trace analytics pipeline
 
-To monitor trace analytics in Data Prepper, we provide three pipelines: `entry-pipeline`, `raw-trace-pipeline`, and `service-map-pipeline`. The following image provides an overview of how the pipelines work together to monitor trace analytics. 
+To monitor trace analytics in Data Prepper, we provide three pipelines: `entry-pipeline`, `raw-pipeline`, and `service-map-pipeline`. The following image provides an overview of how the pipelines work together to monitor trace analytics. 
 
 <img src="{{site.url}}{{site.baseurl}}/images/data-prepper/trace-analytics/trace-analytics-pipeline.jpg" alt="Trace analytics pipeline overview">{: .img-fluid}
 
@@ -64,7 +64,7 @@ Use the following recommended configurations to scale Data Prepper. We recommend
 
 #### Buffer
 
-The total number of trace requests processed by Data Prepper is equal to the sum of the `buffer_size` values in `otel-trace-pipeline` and `raw-pipeline`. The total number of trace requests sent to OpenSearch is equal to the product of `batch_size` and `workers` in `raw-trace-pipeline`. For more information about `raw-pipeline`, see [Trace analytics pipeline]({{site.url}}{{site.baseurl}}/data-prepper/pipelines/pipelines).
+The total number of trace requests processed by Data Prepper is equal to the sum of the `buffer_size` values in `otel-trace-pipeline` and `raw-pipeline`. The total number of trace requests sent to OpenSearch is equal to the product of `batch_size` and `workers` in `raw-pipeline`. For more information about `raw-pipeline`, see [Trace analytics pipeline]({{site.url}}{{site.baseurl}}/data-prepper/pipelines/pipelines).
 
 
 We recommend the following when making changes to buffer settings:
@@ -128,7 +128,7 @@ entry-pipeline:
       batch_size: 160
   sink:
     - pipeline:
-        name: "raw-trace-pipeline"
+        name: "raw-pipeline"
     - pipeline:
         name: "service-map-pipeline"
 raw-pipeline:
@@ -220,7 +220,7 @@ otel-trace-pipeline:
        batch_size: 8
   sink:
     - pipeline:
-        name: "raw-trace-pipeline"
+        name: "raw-pipeline"
     - pipeline:
         name: "entry-pipeline"
 raw-pipeline:
